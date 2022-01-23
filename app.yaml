@@ -1,0 +1,8 @@
+runtime: python39 # or another supported version
+entrypoint: python3 api/app.py
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+- url: /static
+  static_dir: client/build
